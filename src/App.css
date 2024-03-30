@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Body Styles */
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container Styles */
+.container {
+  position: relative;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.299);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Input, Textarea, and Button Styles */
+.container > input,
+textarea,
+.btn {
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.203);
+  padding: .6rem;
+  margin: 0.6rem;
+  border-radius: 0.4rem;
+  outline: none;
+}
+
+.input-box {
+  /* Duplicate style for input box */
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.203);
+  padding: .6rem;
+  margin: 0.6rem;
+  border-radius: 0.4rem;
+  outline: none;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.862);
   color: white;
+  font-weight: bold;
+  width: 85%;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  cursor: pointer;
+  background: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Divider Line Styles */
+.line {
+  width: 92%;
+  border-top: 1px solid rgba(0, 0, 0, 0.299);
+  margin-top: -5px;
+}
+
+/* Header Effect Styles */
+.h-effect {
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Task Styles */
+.task {
+  margin: 12px 0;
+}
+
+/* Image Styles */
+img {
+  width: 20px;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/* Task Box Styles */
+.task-box {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-top:10px ;
+  margin-bottom: 5px;
+}
+
+/* Image Box Styles */
+.img-box {
+  display: flex;
+  gap: 40px;
+}
+
+/* Text Styles */
+p,
+span {
+  font-weight: bold;
+  font-size: medium;
+  color: rgba(0, 0, 0, 0.575);
+}
+
+.p-title:hover {
+  cursor: pointer;
+}
+
+span {
+  font-size: small;
+}
+
+.p-title {
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.862);
+}
+
+/* Delete Image Styles */
+.img-delete {
+  margin-right: 30px;
+}
+/* Media Queries for Mobile Phones */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    border: 0 solid black;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Media Queries for Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 70%;
+   
   }
 }
